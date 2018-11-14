@@ -20,7 +20,9 @@ int main(int argc, char** argv){
     MPI_Comm_size (MPI_COMM_WORLD, &size);
     N = (int)((double)N/(double)size);
     rank=rank+1;
-    FILE *in = fopen("sample_"+ std::to_string(rank) + ".dat","w");
+    char nombre[100];
+    sprintf(nombre,"sample_%d.dat",rank)
+    FILE *in = fopen(nombre,"w");
     int i;
     for( i = 0; i<N; i++){
         if (((double)rand()/(double)RAND_MAX)>0.5){
