@@ -1,5 +1,5 @@
 #!/bin/bash
-#PBS -l nodes=1:ppn=8,mem=64gb,walltime=02:00
+#PBS -l nodes=5:ppn=8,mem=64gb,walltime=02:00
 #PBS -M a.martinez@uniandes.edu.co
 #PBS -m abe
 #PBS -N Programa
@@ -10,3 +10,5 @@ make -f make.mk
 ./Listings1
 ./Listings2
 
+mpicc sample.c -0 sample
+mpirun -np 2 sample 500 0 0.2
