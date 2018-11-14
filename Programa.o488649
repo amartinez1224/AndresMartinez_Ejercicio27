@@ -1,0 +1,6 @@
+mpicc Listings1.c -o Listings1
+mpicc Listings2.c -o Listings2
+Hello world from process 0 of 1
+
+
+(hpcstats) Getting modules
