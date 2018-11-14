@@ -21,7 +21,7 @@ int main(int argc, char** argv){
     N = (int)((double)N/(double)size);
     rank=rank+1;
     char nombre[100];
-    sprintf(nombre,"sample_%d.dat",rank)
+    sprintf(nombre,"sample_%d.dat",rank);
     FILE *in = fopen(nombre,"w");
     int i;
     for( i = 0; i<N; i++){
